@@ -1,0 +1,31 @@
+# Site settings
+title: "MoJaB"
+email: hello@mojab.org
+description: "Personal Home Page"
+baseurl: ""
+url: "http://mojab.org/"
+title_description: "..."
+title_image: "http://www.gravatar.com/avatar/629f078c81f1e6406f7cf3d4bab372fb?s=500&d=mm"
+google_analytics: "UA-68703889-1"
+disqus_account: m0jab
+github_repository: https://github.com/mojab/mojab.github.io
+addthis_id: ra-561bc35bb748be0d
+post_limit: 5
+
+# Social usernames/URLs
+twitter_username: _mojab_
+github_username:  mojab
+linkedin_link: https://ir.linkedin.com/in/mojab
+google_plus_link: https://plus.google.com/+MohammadJavadBadiei
+stackoverflow_link: http://stackoverflow.com/users/5437116/mojab
+
+# Footer
+footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://jekyllrb.com">Jekyll</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/mojab/mojab.github.io\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+permalink: pretty
+exclude: [vendor]
