@@ -3,11 +3,12 @@ layout:     post
 title:      Hello World!
 date:       2014-06-08 12:32:18
 summary:    rebuilding blog.
-categories: jekyll,misc
+categories: jekyll
 thumbnail: jekyll
 tags:
  - jekyll
  - blog
+ - misc
 ---
 
 Hello there! I am re-building my website after 2 years of running it off [Openshift][1]. Before this, from 2010 to 2014 it ran on [WordPress][2].
