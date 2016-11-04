@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Hello World
+title:      Hello World!
 date:       2014-06-08 12:32:18
 summary:    rebuilding blog.
 categories: jekyll,misc
