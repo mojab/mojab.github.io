@@ -1,48 +1,191 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title> MoJaB </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.68.3" />
 
 
-<div class="container-fluid index">
-    <div class="row">
 
-        <div class="col-md-12 main content-panel">
 
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
-            </div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
 
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-            {% include social_links.html %}
-          </div>
-          <div class="col-md-12 main content-panel">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-            <div class="articles">
 
-              <h2>Latest Articles</h2>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-              <ul>
-                  {% for post in site.posts | limit: site.post_limit %}
 
-                      <li>
-                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                          <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                      </li>
+<link rel="stylesheet" href="/css/nix.css">
 
-                  {% endfor %}
-                  <li>
-                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                  </li>
-              </ul>
 
-            </div>
 
-        </div>
 
-    </div>
-</div>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-68703889-1', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+	</head>
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='/'>
+        i@mojab.org ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='/'>/home/mojab</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/mohammadjavad-badiei-cv.pdf">~/about</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="/post">~/post</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			
+			<div class="row">
+				<div class="col-sm-3 col-centered">
+					<img alt="profile-picture" class="img-responsive img-circle user-picture center-block" src="http://www.gravatar.com/avatar/629f078c81f1e6406f7cf3d4bab372fb?s=500&amp;d=mm">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-12 user-profile text-center">
+					<h1 id="user-name">Mohammad Javad Badiei</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 user-social text-center">
+				
+
+
+<a href="https://stackoverflow.com/users/5437116" rel="me" title="StackExchange"><i class="fab fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
+
+
+
+<a href="https://twitter.com/_mojab_" rel="me" title="Twitter"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
+
+
+
+
+
+
+<a href="https://github.com/mojab" rel="me" title="GitHub"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+
+
+<a href="https://gitlab.com/mojab" rel="me" title="GitLab"><i class="fab fa-gitlab fa-3x" aria-hidden="true"></i></a>
+
+
+
+<a href="https://linkedin.com/in/mojab" rel="me" title="LinkedIn"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
+
+
+<a href="https://instagram.com/mo.ja.b" rel="me" title="Instagram"><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
+
+
+<a href="https://t.me/mojab" rel="me" title="Telegram"><i class="fab fa-telegram fa-3x" aria-hidden="true"></i></a>
+
+
+
+<a href="mailto:hello@mojab.org" title="Email"><i class="fas fa-envelope fa-3x" aria-hidden="true"></i></a>
+
+
+
+
+
+
+<a href="/MohammadJavad-Badiei-cv.pdf" title="Curriculum Vitae"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></a>
+
+
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 user-description text-center">
+					<p>Solution Architect , Fullstack Developer , DevOps</p>
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2020 Mohammad Javad Badiei -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	
+</span>
+</p>
+</footer>
+
+	</body>
+</html>
